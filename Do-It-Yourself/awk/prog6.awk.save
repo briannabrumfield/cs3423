@@ -1,0 +1,9 @@
+/User-Name/{
+ a[$3]
+ b[$1]+=$2
+}
+END {
+ for (i in b)
+        print i, b[i];
+}
+
