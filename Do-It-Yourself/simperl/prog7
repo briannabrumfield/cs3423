@@ -1,0 +1,11 @@
+#!/usr/bin/perl -w
+
+@dirs = `/usr/bin/find @ARGV`;
+chop @dirs;
+shift @dirs;
+
+foreach $dir(sort @dirs) {
+	if (-d $dir) {
+		print "$dir\n";
+	}
+}

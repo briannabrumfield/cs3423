@@ -1,0 +1,10 @@
+#! /usr/bin/perl -w
+
+#! /usr/bin/perl -w
+
+while(<>) {
+	@line = split(":",$_);
+
+	print $line[0],"\t\t", $line[4] ,"\n" if (@line > 0);
+}
+

@@ -1,0 +1,10 @@
+#! /usr/bin/perl -w
+
+while(<>){
+	@token = split(":",$_);
+	$users{$token[0]} = $token[4];
+}
+
+foreach $user (sort keys %users) {
+	print "$user\t\t$users{$user}\n";
+}

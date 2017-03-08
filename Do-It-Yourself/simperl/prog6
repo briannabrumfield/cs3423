@@ -1,0 +1,11 @@
+#!/usr/bin/perl -w
+
+@files = `/usr/bin/find @ARGV`;
+chop @files;
+shift @files;
+
+foreach $file(sort @files) {
+	if (-f $file) {
+		print "$file\n";
+	}
+}
