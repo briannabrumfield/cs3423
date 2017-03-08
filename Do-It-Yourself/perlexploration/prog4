@@ -1,0 +1,8 @@
+#!/usr/bin/perl -w
+
+while ( $dir = shift ) {
+  open(CORES,"/usr/bin/find $dir -name core -print |") || die "Unable to execute find: $!\n";
+  while ( <CORES> ) {
+    print "rm $_";
+  }
+}

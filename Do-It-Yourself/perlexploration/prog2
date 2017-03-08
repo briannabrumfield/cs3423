@@ -1,0 +1,10 @@
+#!/usr/bin/perl -w
+
+$regexp = shift @ARGV;
+while(<ARGV>) {
+	if ($_ =~/$regexp/) {
+		print "$ARGV:$_";
+	}
+}
+
+

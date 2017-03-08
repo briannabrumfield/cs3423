@@ -1,0 +1,8 @@
+#!/usr/bin/perl -w
+
+while ($_=<ARGV>) {
+	open(FILE, $_) or die "Unable to open $!:$_\n";
+	while ($lines=<FILE>) {
+		print $lines;
+	}
+}

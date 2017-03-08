@@ -1,0 +1,9 @@
+#!/usr/bin/perl -w
+
+while ( <> ) {
+  chop $_;
+  open(F,"/usr/bin/find $_ -name core -print |") || die "Unable to execute find: $!\n";
+  while ( $file = <F> ) {
+    print "rm $file";
+  }
+}
